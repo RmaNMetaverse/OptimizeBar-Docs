@@ -1,0 +1,34 @@
+---
+id: planner
+slug: /planner/
+title: Prepare, inspect, and run a plan
+---
+
+import plannerImage from '@site/static/img/planner.jpg';
+
+# Prepare, inspect, and run a plan
+
+The Planner is the place to decide which changes are worth trying. **Prepare Plan** scans and creates evidence. It does **not** apply an optimization.
+
+<img className="docImage" src={plannerImage} alt="Optimize Bar Planner with measurement controls" />
+<p className="docCaption">Optimization Planner and measurement controls from the 1.0.0 guide.</p>
+
+## Work through a plan
+
+1. Set an objective: **Frame time**, **Memory**, or **Frame time + memory**.
+2. Choose the reviewed scope, relevant options, and [measurement settings](../measurement-and-review/).
+3. Select **Prepare Plan**.
+4. Read each row's status. Open **Target evidence** to inspect eligible targets, excluded targets and their named reasons, and any shared consumers.
+5. Choose the steps you intend to run. Review motion, dependencies, and sequence events, then check the authorization box.
+6. Select **Run Selected Plan**.
+7. Read the operation report and review the entire shot before recording an outcome, accepting a step, or restoring it.
+
+The progress bar shows stages and phases, not time remaining. It may pause while the engine waits or works.
+
+:::caution Interrupted work
+Press **Esc** to request cancellation of an active supported operation. The current engine or asset operation may finish before cancellation takes effect. Inspect the partial result, report, journal, and recovery information before restarting. Do not blindly rerun a batch that may already have applied changes.
+:::
+
+Prepare the plan again after changing policy, camera coverage, or external scene data. **Run Independent Steps** is for previously authorized work whose reviewed dependencies do not conflict with pending batches.
+
+Use the [tool checklist](../tool-checklist/) for what to inspect for each optimization family, and [Planner result meanings](../planner-results/) to interpret row status.

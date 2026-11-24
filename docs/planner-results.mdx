@@ -1,0 +1,21 @@
+---
+id: planner-results
+slug: /planner-results/
+title: Read a Planner result
+---
+
+# Read a Planner result
+
+The Planner's status tells you what to inspect next. Exact wording and enabled controls depend on the operation's state.
+
+| Status | Meaning and next action |
+| --- | --- |
+| **Ready** | A prepared row has a possible reviewed action. Applying it can still fail. Open Target evidence first. |
+| **No eligible targets** | Inspect scope and the named exclusion reasons. |
+| **Applying** | The operation is active. Watch progress and wait for its report. |
+| **Visual review required** | Inspect the complete image, motion, and secondary effects. |
+| **Inconclusive** | Measurements did not establish a comparable result. Keep that verdict and inspect context and warnings. |
+| **Applied; performance not measured** | The change applied, but timing was intentionally skipped. Do not claim a measured gain. |
+| **Interrupted** | Inspect the checkpoint, operation report, and journal before doing anything else. |
+
+**Record Outcome & Continue** can allow progress where recovery and dependency guards permit. It does not mean that the user accepted image quality or proved a performance gain. See [Measure, review, and recover](../measurement-and-review/) for the distinction among recording, accepting, and restoring.

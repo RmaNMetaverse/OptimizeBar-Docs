@@ -1,0 +1,35 @@
+---
+id: audit-and-coverage
+slug: /audit-and-coverage/
+title: Audit, camera route, and scope
+---
+
+# Audit, camera route, and scope
+
+## Capture a baseline audit
+
+In **Audit Capture**, choose the Level Sequence and, if needed, a camera override. Set the intended output dimensions and review warm-up and capture options. Run **Full Audit + ZIP** for the full diagnostic collection or **Quick Audit** for a lighter pass.
+
+Full Audit collects the configured diagnostic views, performance data, and logs at the output location shown by the plugin. Open the resulting artifacts and read any capture warnings before using the result as evidence.
+
+:::tip Compare like with like
+Use matching scene, camera route, renderer, output size, and capture settings. A lower actor count alone does not prove a faster frame. Compare frame time, Game, Draw, GPU, resource measurements, and the actual image.
+:::
+
+## Record camera coverage
+
+1. Create or find the Director for the selected mode.
+2. Assign a suitable camera and choose the Level Sequence.
+3. Record the complete camera route and confirm recording finishes.
+4. Inspect camera cuts, keyframes, sequence events, and nested sequences that change what appears in the shot.
+5. Re-record after editing the route or sequence.
+
+**Coverage** describes the reviewed route and what it can see. It does not measure performance. Check reflections, shadows, motion, off-camera contributors, and other secondary effects separately.
+
+## Protect what matters
+
+Review the protection distance, safety margin, lookahead, and whole-route projected-size settings. Distance and margin protect nearby areas, lookahead considers the upcoming route, and projected size helps identify shot contribution. Explicitly protect important actors.
+
+Choose the reviewed selection or the whole loaded level according to the tool. A change to a shared asset can affect consumers beyond the active shot or level. Open each step's **Target evidence** before applying it.
+
+Next: [Prepare and run a plan](../planner/).

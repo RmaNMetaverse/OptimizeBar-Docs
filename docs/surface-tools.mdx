@@ -1,0 +1,19 @@
+---
+id: surface-tools
+slug: /surface-tools/
+title: Surface and material tools
+---
+
+# Surface and material tools
+
+Surface changes can reduce resource use while changing visible detail. Check close shots, motion, secondary maps, and every shared consumer.
+
+| Tool | What it does | Check after the trial |
+| --- | --- | --- |
+| **Surface texture streaming repair** | Reviews eligible surface mip and streaming settings. | Texture sharpness, pop-in, streaming behavior, and built resource cost. |
+| **Texture memory caps** | Tests a reviewed power-of-two cap on shared textures. | Near-camera detail, secondary maps, all consumers, and matched resource measurements. Data textures or special uses may be excluded. |
+| **Local material optional-branch trial** | Tests a named existing optional switch for eligible local consumers. | The intended branch changed only where reviewed, while original material source remains available. |
+| **Shared mesh material branch trial** | Tests a switch with source-wide effects. | Every affected consumer, including uses outside the current shot and any overrides. |
+| **Static material bake** | Creates a supported local replacement as a separate output. | UVs, color, normals, lighting response, and motion. Animated or unsupported graph behavior may not survive a static bake. |
+
+The guide does not claim that every material graph or texture is supported. Read each row's **Target evidence** and exact recovery path. A smaller texture cap can reduce detail for consumers outside the active shot. A reported texture subset is not a measurement of total GPU memory.

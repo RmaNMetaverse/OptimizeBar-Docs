@@ -1,0 +1,38 @@
+---
+id: index
+slug: /
+title: Start here
+description: Optimize Bar 1.0.0 user guide for Unreal Engine 5.8.
+---
+
+<div className="heroBanner">
+  <h1>Optimize Bar 1.0.0</h1>
+  <p>A practical guide to auditing, planning, measuring, and reviewing scene optimization in Unreal Editor.</p>
+</div>
+
+Optimize Bar helps you examine a shot, prepare possible changes, apply selected changes, and judge the result. Its **ICVFX / Virtual Production**, **Cinematic Rendering**, and **Game** modes can show different controls and objectives. Choose the mode that matches your work before setting up the camera and scene scope.
+
+<div className="stepGrid">
+  <div className="stepCard"><h3>1. Set up</h3><p><a href="./installation/">Install the plugin</a> and open it in Unreal Editor.</p></div>
+  <div className="stepCard"><h3>2. Capture evidence</h3><p><a href="./audit-and-coverage/">Audit the scene and record the camera route</a>.</p></div>
+  <div className="stepCard"><h3>3. Plan and measure</h3><p><a href="./planner/">Prepare a plan</a>, inspect its targets, and run selected steps.</p></div>
+  <div className="stepCard"><h3>4. Review</h3><p><a href="./measurement-and-review/">Compare the result</a> and decide whether to keep or restore it.</p></div>
+</div>
+
+:::caution Before changing a scene
+Work from a recoverable project copy. Preparing a plan only gathers evidence; **Run Selected Plan** applies the reviewed changes. An Editor preview is useful evidence, but it does not certify a final nDisplay, packaged-game, or Movie Render Queue result.
+:::
+
+## Words used throughout this guide
+
+| Term | Plain meaning |
+| --- | --- |
+| Audit | A capture of diagnostic views, performance data, and logs for a chosen scene and shot. |
+| Director | The mode's control for choosing the camera and shot route to review. |
+| Level Sequence | Unreal's timeline for a shot or sequence. |
+| Coverage | The camera route and visible scope recorded for review. It is not a speed measurement. |
+| Plan | A list of possible optimization steps, with evidence and eligibility for each target. |
+| Target evidence | The detailed list of what a step can affect and why other items were excluded. |
+| Journal | The record used to understand an applied batch and support guarded recovery. |
+
+This site is adapted from the supplied **Optimize Bar 1.0.0 User Guide**. The release package identifies Unreal Engine **5.8.0** and **Win64**. The plugin distribution is obtained separately; this site contains instructions and screenshots, not the plugin itself.

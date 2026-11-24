@@ -1,0 +1,47 @@
+---
+id: tool-checklist
+slug: /tool-checklist/
+title: Tool-by-tool working checklist
+---
+
+# Tool-by-tool working checklist
+
+Start with a recoverable project copy, a selected Director and camera, recorded route, and reviewed scene scope. For **each** tool: prepare the plan, open **Target evidence**, inspect eligible and excluded entries, select the row, authorize it, run it, and review the report and full shot. These prompts add to the row's evidence; they do not replace it.
+
+## Surface and generation
+
+| Tool | Before running | After running |
+| --- | --- | --- |
+| **Surface texture streaming repair** | Inspect textures and current mip/streaming settings. | Watch sharpness and pop-in throughout motion; measure resource cost separately after builds. |
+| **Generated PCG scheduling** | Identify generated components and source systems. | Check generation, regeneration, gameplay events, and appearance. |
+| **Static scene captures** | Identify captures and every dependent material or display. | Check each affected screen, reflection, and material during playback. |
+| **Texture memory caps** | Choose a supported power-of-two cap and review all shared consumers; prepare again after policy changes. | Check close detail, secondary maps, shot consistency, and matched texture-subset measurements. |
+
+## Geometry
+
+| Tool | Before running | After running |
+| --- | --- | --- |
+| **Same-material sections** | Review repeated material slots and family preflight. | Check separate output, geometry, collision, material assignments, shadows, and matched draw submission. |
+| **Native ISM/HISM near/far partition** | Confirm recorded route, classifications, instance count, transforms, materials, custom data, and exclusions. | Read report and verify motion and appearance over the route. Keep an incomplete After verdict; do not replay an applied batch. |
+| **Non-Nanite LOD copies** | Review eligible source meshes and editable geometry. | Compare source and candidate through movement: silhouette, shading, transitions, collision, and added resource cost. |
+| **Far geometry LOD trial** | Inspect far classification, route, and protection. | Check representation transitions, shadows, and secondary views over the route. |
+| **Multi-angle impostor trial** | Review candidate family and impostor parameters. | Inspect atlas, depth, animation, transitions, shadows, and cost across camera angles. |
+
+## Materials
+
+| Tool | Before running | After running |
+| --- | --- | --- |
+| **Local material optional-branch trial** | Choose a supported existing static switch and eligible local consumers. | Verify intended branch, original source, lighting, surface appearance, and motion. |
+| **Shared mesh material branch trial** | Identify the shared source and all consumers, including those outside the shot. | Inspect every affected consumer and override; the scope is broader than a local variant. |
+| **Static material bake** | Check eligibility, output size, and preflight. | Inspect separate output and local binding, UVs, color, normals, lighting, and motion. |
+
+## Visibility and behavior
+
+| Tool | Before running | After running |
+| --- | --- | --- |
+| **WPO distance limits** | Review cutoff, route, and deformation; protect VAT, wind, and required movement. | Check complete animation and shadows across the cutoff. |
+| **Ray tracing visibility** | Review direct and secondary contributions of every selected component. | Check reflections, refraction, indirect light, and shadows across the route. |
+| **Far/small instance cull range** | Review native instances, proposed range, and camera path. | Watch for popping, lost silhouettes, motion, and shadows; inspect other cameras. |
+| **Far contributor visibility trial** | Review projected size and distance for each far native instance. | Compare the complete scene, including reflections and lighting. |
+
+The Planner also includes reviewed **Nanite** and **mesh-first ISM** Scene services, plus scanned **Fixes / Analysis** actions. Their exact target lists, exclusions, authorization, and recovery evidence must be checked separately. Standalone controls have their own workflow; see [Fixes and standalone actions](../fixes-and-analysis/).

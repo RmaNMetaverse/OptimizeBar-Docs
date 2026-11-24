@@ -1,0 +1,19 @@
+---
+id: troubleshooting
+slug: /troubleshooting/
+title: Troubleshooting and limitations
+---
+
+# Troubleshooting and limitations
+
+| What you see | What to check |
+| --- | --- |
+| **Plugin does not appear** | Confirm `Plugins/VPOptimizationTools/VPOptimizationTools.uplugin`, Unreal Engine 5.8, Win64 C++ build tools, plugin enablement, requested dependencies, and Editor restart. |
+| **No eligible targets** | Open **Target evidence**. A target may be unsupported, already optimized, out of scope, protected, or missing camera coverage. |
+| **Inconclusive or noisy result** | Keep that verdict. Compare the actual Before/After contexts, repetition count, render settings, and warnings. Do not claim a gain from unmatched data. |
+| **After measurement timed out** | Inspect the operation report and journal before retrying. The batch may already have applied. |
+| **Temporary Level Instance excluded** | The temporary loaded representation was excluded. The source Level Instance was not optimized by that operation; edit and save it separately. |
+| **Invalid journal references** | Preserve backups and journal. Identify the exact batch and current state before any recovery; do not force an old witness to match. |
+| **Viewport instance selection differs** | Check the selected native, Blueprint, PCG, or custom component in the target project. Not every component and overlay behavior has been tested. |
+
+For an optimization that ran without measurement, use the report and visual review; the outcome is unmeasured. For an interrupted operation, inspect partial changes before continuing. Review [Planner result meanings](../planner-results/) and [guarded recovery](../measurement-and-review/) before accepting or restoring a step.

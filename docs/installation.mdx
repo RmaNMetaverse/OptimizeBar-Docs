@@ -1,0 +1,47 @@
+---
+id: installation
+slug: /installation/
+title: Install and open Optimize Bar
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import auditImage from '@site/static/img/audit.jpg';
+
+# Install and open Optimize Bar
+
+The supplied 1.0.0 release is a **Win64 source plugin for Unreal Engine 5.8.0**. Use an installed, supported Unreal Engine version and the C++ build tools required by that engine. The package is not a set of precompiled editor binaries for every engine version.
+
+## Place the plugin in the project
+
+<Tabs>
+  <TabItem value="new" label="Fresh installation" default>
+
+1. Close Unreal Editor.
+2. Back up the project.
+3. Extract the supplied package into the project's `Plugins` folder. The file must end up at `Plugins/VPOptimizationTools/VPOptimizationTools.uplugin`.
+4. Open the project and allow its compatible C++ build if needed.
+
+  </TabItem>
+  <TabItem value="replace" label="Replacing an installation">
+
+1. Close Unreal Editor before replacing plugin files.
+2. Back up both the project and its existing `Plugins/VPOptimizationTools` folder.
+3. Replace that folder with the supplied release. Check that `VPOptimizationTools.uplugin` is directly inside `Plugins/VPOptimizationTools`.
+4. Reopen the project and complete any required build.
+
+  </TabItem>
+</Tabs>
+
+Enable **Optimize Bar** if Unreal asks, and restart the Editor when prompted. The release declares **Movie Render Pipeline** and **Impostor Baker** as plugin dependencies; enable requested dependencies and restart if necessary.
+
+Open **Optimize Bar** from its Unreal Editor toolbar entry. If it does not appear, verify the folder path, engine version, build tools, plugin enablement, and any restart request before trying again.
+
+## Choose the working mode
+
+Select **ICVFX / Virtual Production**, **Cinematic Rendering**, or **Game**. The main navigation then presents **Audit Capture**, **Scene Optimization**, and **Fixes**. Set up the relevant camera and scene scope for the mode before collecting evidence.
+
+<img className="docImage" src={auditImage} alt="Optimize Bar mode selector and Audit Capture panel in Unreal Editor" />
+<p className="docCaption">Mode selector and Audit Capture panel from the 1.0.0 guide.</p>
+
+The screenshot shows the guide's interface; exact controls can depend on mode and current state. Continue with [Audit and camera coverage](../audit-and-coverage/).

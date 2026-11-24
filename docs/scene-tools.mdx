@@ -1,0 +1,20 @@
+---
+id: scene-tools
+slug: /scene-tools/
+title: Scene behavior tools
+---
+
+# Scene behavior tools
+
+These tools can change what appears beyond the direct camera view. Review the entire route and any secondary effects before keeping a result.
+
+| Tool | Key review |
+| --- | --- |
+| **Generated PCG scheduling** | Confirm source systems, regeneration, gameplay events, and generated appearance. A local change may be overwritten by the source graph. |
+| **Static scene captures** | Check recurring captures and the screens, reflections, or materials that use them during playback. |
+| **WPO distance limits** | Protect VAT, wind, and required movement; inspect deformation and shadows across the cutoff. |
+| **Ray tracing visibility** | Inspect reflections, refraction, indirect light, and shadows, as well as the main view. |
+| **Far/small instance cull range** | Watch the full route for popping, missing silhouette, animation, or shadow contributions. |
+| **Far contributor visibility trial** | Check projected-size and distance evidence, then inspect lighting and reflections across the scene. |
+
+Being outside the camera does not mean an object contributes nothing to the image. Use [camera coverage and protection](../audit-and-coverage/) to understand what the recorded route covers.

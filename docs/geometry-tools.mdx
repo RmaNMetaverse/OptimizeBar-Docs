@@ -1,0 +1,33 @@
+---
+id: geometry-tools
+slug: /geometry-tools/
+title: Geometry tools
+---
+
+import ismImage from '@site/static/img/ism.jpg';
+
+# Geometry tools
+
+Geometry changes can affect transforms, materials, collision, shadows, and editability. Prepare a plan and inspect the exact target list before applying a step. Check the full shot afterward.
+
+## Mesh-first ISM and existing instances
+
+**Mesh-first ISM** looks for repeated ordinary meshes and compatible groups. Review transforms, materials, collision, attachments, references, and future editing needs. Existing native instances and single actors are separate populations. Supported attached actors can keep their native parent during conversion, but inspect the eligibility report and verify the result in your project. Blueprint- or PCG-owned sources can be excluded. VAT and required deformation need special care.
+
+For a manual conversion, select actors in the Editor, use the **Scene Optimization → ISM** tools to scan or convert the current selection, and inspect the resulting group. Double-click a supported viewport instance to select it individually. Before **Detach Selected Instance**, confirm which instances are selected; then inspect both the detached actors and the instances left behind. **Break Viewport Selection** works on editable ISM/HISM components of selected actors. **Scan Existing** and **Break Checked** use the separate component list.
+
+<img className="docImage" src={ismImage} alt="Standalone ISM controls in Optimize Bar" />
+<p className="docCaption">Standalone ISM controls from the 1.0.0 guide.</p>
+
+## Other geometry families
+
+| Tool | What to review |
+| --- | --- |
+| **Nanite review** | Supported assets and every affected consumer. Asset-wide changes need a resource build and visual check. |
+| **Same-material sections** | Compatible sections in a separate-output trial. Check material assignments, geometry, collision, and draw submission under matched measurement. |
+| **Native ISM/HISM near/far partition** | Route-based near and far classifications, transforms, instance data, and motion. Temporary loaded Level Instance representations are excluded. |
+| **Non-Nanite LOD copies** | Separate reduced-geometry outputs. Inspect silhouette, shading, transitions, collision, and added resource cost. |
+| **Far geometry LOD trial** | Far-scope representation across the route, including transitions and shadows. |
+| **Multi-angle impostor trial** | Distant atlas representation across camera angles, depth, animation, transitions, and atlas/mesh cost. |
+
+These are trials, not guaranteed gains. Use [measurement and review](../measurement-and-review/) to decide whether a candidate is worth keeping.

@@ -1,0 +1,33 @@
+---
+id: measurement-and-review
+slug: /measurement-and-review/
+title: Measure, review, and recover
+---
+
+# Measure, review, and recover
+
+## Set up measurement
+
+The Planner offers **Measurement screenshots** from 0 to 20, **Whole-shot repetitions** from 1 to 5, and **Measure performance before and after each step**. Zero screenshots is allowed. The available frames in a sequence can limit how many distinct captures are possible.
+
+Whole-shot repetitions time the complete shot. One or two runs can be useful diagnostic samples, but the guide calls for **at least three comparable repetitions** before promoting a measured family pilot or claiming a reliable performance gain.
+
+With measurement enabled, the sequence is **Before → apply reviewed batch → attempt After**. For measurement, Optimize Bar temporarily applies Audit output size and screen-percentage settings, then restores the settings it owns. Unsupported or ambiguous render conditions can make a result inconclusive.
+
+If measurement is disabled, the batch still applies but the outcome is **unmeasured**. That is neither a performance claim nor a visual acceptance. Automatic regression detection needs matching evidence. Review the image, motion, operation report, and batch journal yourself.
+
+## Review the result
+
+Read the operation report and any Before/After charts. Play the complete shot and inspect animation, textures, shadows, reflections, and lighting. Look beyond the main camera when a change can affect secondary contributions or shared assets.
+
+| Action | What it means |
+| --- | --- |
+| **Accept Reviewed Step** | A quality decision for supported, comparable evidence. |
+| **Record Outcome & Continue** | Records what happened so the workflow can advance where guards allow. It does not claim visual acceptance or performance improvement. |
+| **Restore Step + Verify** | Uses the specific batch and its recovery evidence. It is not an unconditional Unreal Undo. |
+
+## Recover carefully
+
+Backups are saved package files, and the journal tracks supported changes. An external edit can make a restore unsafe. Preserve the original journal and backups, identify the exact batch, and inspect invalid references before attempting recovery. Do not force a restore or repeat an already applied batch.
+
+Read [troubleshooting](../troubleshooting/) when an After measurement times out, evidence is inconclusive, or a journal reference is invalid.
