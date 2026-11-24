@@ -19,6 +19,7 @@ const config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
+      style: 'dark',
       title: 'Optimize Bar',
       items: [
         { to: '/', label: 'Start here', position: 'left' },

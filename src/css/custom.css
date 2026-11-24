@@ -39,3 +39,10 @@ html[data-theme='dark'] {
   --ifm-color-primary-lighter: #99e1fa;
   --ifm-color-primary-lightest: #c3edfc;
 }
+
+/* Keep the reading-mode control visible beside the mobile menu. */
+@media (max-width: 996px) {
+  .navbar__items--right > div:has(> button[aria-label^='Switch between dark and light mode']) {
+    display: block;
+  }
+}
