@@ -13,6 +13,11 @@ const config = {
     theme: { customCss: './src/css/custom.css' },
   }]],
   themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'Optimize Bar',
       items: [
@@ -31,3 +36,4 @@ const config = {
 };
 
 module.exports = config;
+
