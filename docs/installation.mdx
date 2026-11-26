@@ -12,6 +12,15 @@ import auditImage from '@site/static/img/audit.jpg';
 
 The supplied 1.0.0 release is a **Win64 source plugin for Unreal Engine 5.8.0**. Use an installed, supported Unreal Engine version and the C++ build tools required by that engine. The package is not a set of precompiled editor binaries for every engine version.
 
+## Dependencies and needed plugins
+
+Optimize Bar requires these two Unreal Engine plugins:
+
+1. `MovieRenderPipeline` (Movie Render Pipeline)
+2. `ImpostorBaker` (Impostor Baker)
+
+Confirm that both are available and enabled for the project. If Unreal Editor asks to enable either dependency when you enable Optimize Bar, accept the prompt and restart the Editor.
+
 ## Place the plugin in the project
 
 <Tabs>
@@ -33,7 +42,7 @@ The supplied 1.0.0 release is a **Win64 source plugin for Unreal Engine 5.8.0**.
   </TabItem>
 </Tabs>
 
-Enable **Optimize Bar** if Unreal asks, and restart the Editor when prompted. The release declares **Movie Render Pipeline** and **Impostor Baker** as plugin dependencies; enable requested dependencies and restart if necessary.
+Enable **Optimize Bar** if Unreal asks, and restart the Editor when prompted.
 
 Open **Optimize Bar** from its Unreal Editor toolbar entry. If it does not appear, verify the folder path, engine version, build tools, plugin enablement, and any restart request before trying again.
 

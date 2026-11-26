@@ -8,7 +8,7 @@ title: Troubleshooting and limitations
 
 | What you see | What to check |
 | --- | --- |
-| **Plugin does not appear** | Confirm `Plugins/VPOptimizationTools/VPOptimizationTools.uplugin`, Unreal Engine 5.8, Win64 C++ build tools, plugin enablement, requested dependencies, and Editor restart. |
+| **Plugin does not appear** | Confirm `Plugins/VPOptimizationTools/VPOptimizationTools.uplugin`, Unreal Engine 5.8, Win64 C++ build tools, plugin enablement, [`MovieRenderPipeline` and `ImpostorBaker`](../installation/#dependencies-and-needed-plugins), and Editor restart. |
 | **No eligible targets** | Open **Target evidence**. A target may be unsupported, already optimized, out of scope, protected, or missing camera coverage. |
 | **Inconclusive or noisy result** | Keep that verdict. Compare the actual Before/After contexts, repetition count, render settings, and warnings. Do not claim a gain from unmatched data. |
 | **After measurement timed out** | Inspect the operation report and journal before retrying. The batch may already have applied. |
